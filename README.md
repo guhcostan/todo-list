@@ -1,53 +1,57 @@
-# Getting Started with Create React App
+# Bem-vindo ao TODO app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicação foi construído para que os times consigam se organizar com lista de tarefas, de forma compartilhada e colaborativa.
 
-## Available Scripts
+## Como rodar o projeto
+Para rodar o projeto, precisamos primeiramente instalar as dependencias:
 
-In the project directory, you can run:
+```
+yarn install
+```
 
-### `yarn start`
+Após isso rodar o mock do backend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+yarn start-backend
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Após isso rodar o frotend:
 
-### `yarn test`
+```
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
-information.
+OBS: Para rodar no ambiente de producao, deve ser modificado o arquivo .env, onde possui a variavel REACT_APP_API_URL.
 
-### `yarn build`
+## Avaliação do escopo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Alguns pontos desse projeto foram questionados ao Sr Vibbraneo, exatamente por serem facilmente confundidos. Foi questionado sobre quantas sublistas poderiam ser criadas, porem nessa v1, deixei somente possível criar uma sublista.
+Acredito que seria interessante uma conversa melhor sobre o Sr Vibbraneo com o time de backend, para formularem melhor os contratos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estimativa em horas do projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Foram organizadas algumas atividades para a conclusão do projeto:
 
-### `yarn eject`
+- Criar servidor de mock para implementação da integração - 3h
+- Criar projeto inicial do frontend - 1h
+- Criar serviços de integrações - 2h
+- Criar interface gráfica das principais telas - 2h
+- Integrar serviço com telas - 4h
+- Ajustes finais - 4h
+- Configuração do ambiente de produção - 2h
+- Documentação - 2h
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will
-remove the single build dependency from your project.
+## Estimativa em dias do projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right
-into your project so you have full control over them. All of the commands except `eject` will still work, but they will
-point to the copied scripts so you can tweak them. At this point you’re on your own.
+Por conta de estar apto a trabalhar 4h diárias e as atividades somarem 20h, foi estimado 5 dias de trabalho para a entrega completa da aplicação.
+Porém, como tive mais tempo para me dedicar, acabei completando às 20h em 2 dias.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you
-shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+## Aponte as horas usadas para fazer o teste
 
-## Learn More
+Foi apontada de forma clara e objetiva as horas utilizadas para desenvolvimento do projeto na própria plataforma vibbra.
 
-You can learn more in
-the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Detalhes importantes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Durante o projeto existiram diversas dúvidas, porém, não foram respondidas a tempo, esse tempo não poderia ser inutilizado, então implementei da forma que entendi e farei uma validação com o Sr Vibbraneo assim que obter resposta.
+- Nas requisições não foram pedidos testes automatizados, então não implementei, porém, recomendaria o Sr Vibbraneo investir algumas horas no desenvolvimento do mesmo

@@ -7,6 +7,8 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import TableScreen from "./screens/TableScreen";
 
+import './utils/axios-middleware'
+
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

@@ -76,11 +76,14 @@ const HomeScreen = () => {
                     {todos.map(todo => <tr>
                         <th>{todo.id}</th>
                         <th>{todo.name}</th>
-                        <th><button onClick={() => {
+                        <th>
+                            <button onClick={() => {
 
-                            navigate("/list/" + todo.name)
-                        }
-                        }>Acessar</button></th>
+                                navigate("/list/" + todo.name)
+                            }
+                            }>Acessar
+                            </button>
+                        </th>
                     </tr>)}
                     </tbody>
                 </table>}

@@ -54,7 +54,7 @@ const editItem = (tableId: number, item: Item, newItemName: string) => {
 }
 
 const deleteItem = (tableId: number, itemId: number) => {
-    return axios.delete(process.env.REACT_APP_API_URL + "/todo/itens/"+ tableId + "/" + itemId)
+    return axios.delete(process.env.REACT_APP_API_URL + "/todo/itens/" + tableId + "/" + itemId)
 }
 
 const TodoServices = {

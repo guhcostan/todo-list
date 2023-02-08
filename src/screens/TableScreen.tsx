@@ -29,7 +29,7 @@ const TableScreen = () => {
             const response = await TodoServices.getTodoByName(params.tableName)
             if (response) {
                 setTable(response)
-            } else{
+            } else {
                 await TodoServices.createTodo(Math.random(), params.tableName)
                 await updateTable()
             }
@@ -37,66 +37,70 @@ const TableScreen = () => {
     }
 
     useEffect(() => {
-        if(params.tableName) {
+        if (params.tableName) {
             updateTable()
         }
     }, [])
 
     const renderItem = (item: Item, index: number) => {
-            return <tbody><tr>
-                <th>
-                    {item.order}
-                </th>
-                <th>
-                    {item.item ? item.item : renderSubItens(item, item.itens, index + 1)}
-                </th>
-                <th>
-                    {!item?.itens?.length && <button onClick={async () => {
-                        if (currentTable) {
-                            await TodoServices.transformItemToSubItem(currentTable.id, item)
-                            await updateTable()
-                        }
+        return <tbody>
+        <tr>
+            <th>
+                {item.order}
+            </th>
+            <th>
+                {item.item ? item.item : renderSubItens(item, item.itens, index + 1)}
+            </th>
+            <th>
+                {!item?.itens?.length && <button onClick={async () => {
+                    if (currentTable) {
+                        await TodoServices.transformItemToSubItem(currentTable.id, item)
+                        await updateTable()
                     }
-                    }>Transform in subitem</button>}
-                     <button onClick={() => {
-                         setEditItem(item)
-                         setModalOpen(true)
-                     }
-                     }>Edit</button>
-                    <button onClick={async () => {
-                        if (currentTable) {
-                            await TodoServices.deleteItem(currentTable.id, item.id)
-                            await updateTable()
-                        }
+                }
+                }>Transform in subitem</button>}
+                <button onClick={() => {
+                    setEditItem(item)
+                    setModalOpen(true)
+                }
+                }>Edit
+                </button>
+                <button onClick={async () => {
+                    if (currentTable) {
+                        await TodoServices.deleteItem(currentTable.id, item.id)
+                        await updateTable()
                     }
-                    }>Delete
-                    </button>
-                </th>
-            </tr>
-            </tbody>
+                }
+                }>Delete
+                </button>
+            </th>
+        </tr>
+        </tbody>
     }
 
-    const renderSubItem = (item: Item, index: number,itemTop: Item,) => {
-            return <tbody><tr>
-                <th>
-                    {item.order}
-                </th>
-                <th>
-                    {item.item ? item.item : renderSubItens(item, item.itens, index + 1)}
-                </th>
-                <th>
-                    <button onClick={async () => {
-                        if (currentTable) {
-                            await TodoServices.moveToTop(currentTable.id, item, itemTop)
-                            await updateTable()
-                        }
-                    }}>Move Top</button>
-                </th>
-            </tr>
-            </tbody>
+    const renderSubItem = (item: Item, index: number, itemTop: Item,) => {
+        return <tbody>
+        <tr>
+            <th>
+                {item.order}
+            </th>
+            <th>
+                {item.item ? item.item : renderSubItens(item, item.itens, index + 1)}
+            </th>
+            <th>
+                <button onClick={async () => {
+                    if (currentTable) {
+                        await TodoServices.moveToTop(currentTable.id, item, itemTop)
+                        await updateTable()
+                    }
+                }}>Move Top
+                </button>
+            </th>
+        </tr>
+        </tbody>
     }
 
-    const renderTableHeader = () =>  <tbody>
+    const renderTableHeader = () => <tbody>
     <tr>
         <th>
             Order
@@ -138,18 +142,18 @@ const TableScreen = () => {
         <Modal
             onRequestClose={() => setModalOpen(false)} style={customStyles} isOpen={modalOpen}>
             <ItemModal item={editItem?.item} onAddPress={async (itemName) => {
-            if (currentTable) {
-                if(editItem){
-                    await TodoServices.editItem(currentTable.id, editItem, itemName)
-                    setEditItem(undefined)
-                }else{
-                    await TodoServices.createItem(currentTable.id, currentTable, itemName)
+                if (currentTable) {
+                    if (editItem) {
+                        await TodoServices.editItem(currentTable.id, editItem, itemName)
+                        setEditItem(undefined)
+                    } else {
+                        await TodoServices.createItem(currentTable.id, currentTable, itemName)
+                    }
+                    await updateTable()
+                    setModalOpen(false)
                 }
-                await updateTable()
-                setModalOpen(false)
             }
-        }
-        }/></Modal>
+            }/></Modal>
     </div> : <div></div>
 }
 

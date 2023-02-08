@@ -1,4 +1,5 @@
 {
+  "buildCommand": "yarn build",
   "builds": [
     {
       "src": "server.js",

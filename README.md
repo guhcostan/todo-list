@@ -11,10 +11,10 @@ Para rodar o projeto, precisamos primeiramente instalar as dependencias:
 yarn install
 ```
 
-Após isso rodar o mock do backend:
+Após isso clonar o projeto do backend e rodar o comando:
 
 ```
-yarn start-backend
+yarn install && yarn start
 ```
 
 Após isso rodar o frotend:
@@ -23,7 +23,7 @@ Após isso rodar o frotend:
 yarn start
 ```
 
-OBS: Para rodar no ambiente de producao, deve ser modificado o arquivo .env, onde possui a variavel REACT_APP_API_URL.
+OBS: Para rodar no ambiente de producao, deve ser modificado o arquivo .env.development, onde possui a variavel REACT_APP_API_URL, a url de producao pode ser encontrada no .env.
 
 ## Avaliação do escopo
 

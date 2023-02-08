@@ -36,14 +36,14 @@ os contratos.
 
 Foram organizadas algumas atividades para a conclusão do projeto:
 
-- Criar servidor de mock para implementação da integração - 3h
-- Criar projeto inicial do frontend - 1h
-- Criar serviços de integrações - 2h
-- Criar interface gráfica das principais telas - 2h
-- Integrar serviço com telas - 4h
-- Ajustes finais - 4h
-- Configuração do ambiente de produção - 2h
-- Documentação - 2h
+-   Criar servidor de mock para implementação da integração - 3h
+-   Criar projeto inicial do frontend - 1h
+-   Criar serviços de integrações - 2h
+-   Criar interface gráfica das principais telas - 2h
+-   Integrar serviço com telas - 4h
+-   Ajustes finais - 4h
+-   Configuração do ambiente de produção - 2h
+-   Documentação - 2h
 
 ## Estimativa em dias do projeto
 
@@ -57,7 +57,7 @@ Foi apontada de forma clara e objetiva as horas utilizadas para desenvolvimento 
 
 ## Detalhes importantes
 
-- Durante o projeto existiram diversas dúvidas, porém, não foram respondidas a tempo, esse tempo não poderia ser
-  inutilizado, então implementei da forma que entendi e farei uma validação com o Sr Vibbraneo assim que obter resposta.
-- Nas requisições não foram pedidos testes automatizados, então não implementei, porém, recomendaria o Sr Vibbraneo
-  investir algumas horas no desenvolvimento do mesmo
+-   Durante o projeto existiram diversas dúvidas, porém, não foram respondidas a tempo, esse tempo não poderia ser
+    inutilizado, então implementei da forma que entendi e farei uma validação com o Sr Vibbraneo assim que obter resposta.
+-   Nas requisições não foram pedidos testes automatizados, então não implementei, porém, recomendaria o Sr Vibbraneo
+    investir algumas horas no desenvolvimento do mesmo
